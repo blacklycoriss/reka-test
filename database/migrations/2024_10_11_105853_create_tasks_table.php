@@ -17,7 +17,6 @@ return new class extends Migration
             ->onDelete('cascade');
             $table->string('title', 20);
             $table->string('text', 200);
-            $table->foreign('tags')->references('id')->on('tags');
             $table->timestamps();
         });
     }

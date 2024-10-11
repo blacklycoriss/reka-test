@@ -9,8 +9,8 @@ class Tag extends Model
 {
     use HasFactory;
 
-    public function task
+    public function task()
     {
-        return $this->belongsToMany(Task::class);
+        return $this->belongsToMany(Task::class, 'task_tags', 'tag_id', 'task_id');
     }
 }
