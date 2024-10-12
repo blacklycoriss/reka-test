@@ -30,7 +30,7 @@ class TaskController extends Controller
      */
     public function show(string $id)
     {
-        return TaskResource::collection(Task::find($id));
+        return TaskResource::collection(Task::findOrFail($id));
     }
 
     /**

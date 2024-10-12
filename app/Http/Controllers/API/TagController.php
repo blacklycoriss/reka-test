@@ -30,7 +30,7 @@ class TagController extends Controller
      */
     public function show(string $id)
     {
-        return TagResource::collection(Tag::find($id));
+        return TagResource::collection(Tag::findOrFail($id));
     }
 
     /**
