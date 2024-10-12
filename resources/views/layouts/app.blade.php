@@ -11,7 +11,7 @@
 <div class="container">
     <nav class="navbar navbar-light bg-light">
         <div class="container-fluid">
-            <a href=""
+            <a href="{{ route('home') }}"
                class="navbar-brand me-auto">Главная</a>
             @guest
                 <a href="{{ route('register') }}"
