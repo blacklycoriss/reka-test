@@ -9,6 +9,11 @@ use Illuminate\Http\Request;
 
 class TaskController extends Controller
 {
+    private const TASK_VALIDATOR = [
+        'title' => 'required|min:3|max:20',
+        'text' => 'max:200',
+    ];
+
     /**
      * Display a listing of the resource.
      */

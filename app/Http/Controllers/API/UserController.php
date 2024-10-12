@@ -9,6 +9,12 @@ use Illuminate\Http\Request;
 
 class UserController extends Controller
 {
+    private const USER_VALIDATOR = [
+        'name' => 'required',
+        'password' => 'required',
+        'email' => 'required|unique',
+    ];
+
     /**
      * Display a listing of the resource.
      */

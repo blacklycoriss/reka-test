@@ -9,6 +9,10 @@ use Illuminate\Http\Request;
 
 class TagController extends Controller
 {
+    private const TAG_VALIDATOR = [
+        'title' => 'required|max:20',
+    ];
+
     /**
      * Display a listing of the resource.
      */
