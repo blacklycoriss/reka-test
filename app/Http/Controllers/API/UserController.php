@@ -30,7 +30,7 @@ class UserController extends Controller
      */
     public function show(string $id)
     {
-        return new UserResource(User::findOrFail($id));
+        return new UserResource(User::with('tasks')->User::findOrFail($id));
     }
 
     /**
