@@ -30,7 +30,7 @@ class UserController extends Controller
      */
     public function show(string $id)
     {
-        return User::find($id);
+        return new UserResource(User::find($id));
     }
 
     /**
