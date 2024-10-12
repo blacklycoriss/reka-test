@@ -3,7 +3,7 @@
 @section('content')
 
     <h2>Добро пожаловать, {{ Auth::user()->name }}!</h2>
-    <p class="text-end"><a href="">Создать задачу</a></p>
+    <p class="text-end"><a href="{{ route('task.create') }}">Создать задачу</a></p>
 
 {{--    @if (count($tasks) > 0)--}}
         <table class="table table-striped table-borderless">

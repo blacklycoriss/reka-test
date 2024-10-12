@@ -30,4 +30,9 @@ class HomeController extends Controller
                 Auth::user()->tasks()->latest()->get(),
             ]);
     }
+
+    public function create()
+    {
+        return view('task-create');
+    }
 }

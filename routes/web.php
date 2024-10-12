@@ -15,4 +15,7 @@ use App\Http\Controllers\HomeController;
 */
 
 Auth::routes();
-Route::get('/home', [HomeController::class, 'index'])->name('home');
+Route::get('/home',
+    [HomeController::class, 'index'])->name('home');
+Route::get('/home/create',
+    [HomeController::class, 'create'])->name('task.create');
