@@ -14,7 +14,7 @@ class TagController extends Controller
      */
     public function index()
     {
-        return new TagResource(Tag::all());
+        return TagResource::collection(Tag::all());
     }
 
     /**
@@ -30,7 +30,7 @@ class TagController extends Controller
      */
     public function show(string $id)
     {
-        return TagResource::collection(Tag::findOrFail($id));
+        return new TagResource(Tag::findOrFail($id));
     }
 
     /**
