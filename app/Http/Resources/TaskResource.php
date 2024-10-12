@@ -4,6 +4,7 @@ namespace App\Http\Resources;
 
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
+use App\Http\Resources\TagResource;
 
 class TaskResource extends JsonResource
 {
@@ -20,7 +21,7 @@ class TaskResource extends JsonResource
             'title' => $this->title,
             'text' => $this->text,
             'created_at' => $this->created_at,
-            'tags' => $this->tags,
+            'tags' => TagResource::collection($this->tags),
         ];
     }
 }

@@ -30,7 +30,7 @@ class TaskController extends Controller
      */
     public function show(string $id)
     {
-        return new TaskResource(Task::with('tags')->Task::findOrFail($id));
+        return new TaskResource(Task::findOrFail($id));
     }
 
     /**
