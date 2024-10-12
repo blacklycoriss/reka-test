@@ -9,8 +9,13 @@ class Tag extends Model
 {
     use HasFactory;
 
+    protected $fillable = [
+        'title',
+    ];
+
     public function tasks()
     {
-        return $this->belongsToMany(Task::class, 'task_tags', 'tag_id', 'task_id');
+        return $this->belongsToMany(Task::class, 'task_tags',
+            'tag_id', 'task_id');
     }
 }
