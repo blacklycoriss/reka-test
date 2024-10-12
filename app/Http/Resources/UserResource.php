@@ -2,6 +2,7 @@
 
 namespace App\Http\Resources;
 
+use App\Http\Resources\TaskResource;
 use Illuminate\Http\Request;
 use Illuminate\Http\Resources\Json\JsonResource;
 
@@ -20,7 +21,7 @@ class UserResource extends JsonResource
             'email' => $this->email,
             'api_token' => $this->api_token,
             'created_at' => $this->created_at,
-            'tasks' => $this->tasks,
+            'tasks' => TaskResource::collection($this->tasks),
         ];
     }
 }
