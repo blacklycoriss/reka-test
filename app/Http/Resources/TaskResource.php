@@ -19,7 +19,7 @@ class TaskResource extends JsonResource
             'id' => $this->id,
             'user_id' => $this->user_id,
             'title' => $this->title,
-            'text' => $this->text,
+            'content' => $this->content,
             'created_at' => $this->created_at,
             'tags' => TagResource::collection($this->tags),
         ];

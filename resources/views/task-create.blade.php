@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('title', 'Создание задачи :: Мои задачи')
 @section('content')
-    <form action="" method="POST">
+    <form action="{{ route('tasks.store') }}" method="POST">
         @csrf
         <div class="mb-3">
             <label for="txtTitle" class="form-label">Задача</label>
