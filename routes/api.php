@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\API\TagController;
 use App\Http\Controllers\API\UserController;
 use App\Http\Controllers\API\TaskController;
 use Illuminate\Http\Request;
@@ -23,6 +24,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::apiResources(
     [
-        'tasks' => TaskController::class,
         'users' => UserController::class,
+        'tasks' => TaskController::class,
+        'tags' => TagController::class,
     ]);
